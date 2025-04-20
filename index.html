@@ -111,7 +111,7 @@
       <div class="coin-container" onclick="flipCoin()">
          <img id="coin" src="resources/heads.svg" alt="coin">
       </div>
-      
+      <p id="resultText"></p>
       <button class="flipBtn" type="button" onclick="flipCoin()">Random</button>
     </div>
 
@@ -135,9 +135,11 @@
         // Wait until the animation is done (1 second), then change image
         setTimeout(() => {
           coin.src = isHeads ? "resources/heads.svg" : "resources/tails.svg";
+          resultText.textContent = isHeads ? "Heads" : "Tails";
         }, 700); // This must match animation duration
       }
-
+        
+  
     </script>
   </body>
 </html>
